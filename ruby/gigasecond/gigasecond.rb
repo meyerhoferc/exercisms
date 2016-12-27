@@ -8,7 +8,7 @@ class Gigasecond
 
   def self.from(birth)
     format_date(birth)
-    Time.utc(final_year, final_month, final_day, final_hour, final_minute, final_second)
+    # Time.utc(@final_year, @final_month, @final_day, @final_hour, @final_minute, @final_second)
   end
 
   def self.format_date(birth)
@@ -19,8 +19,8 @@ class Gigasecond
     hour = birth.hour
     minute = birth.min
     second = birth.sec
-    final_day = add_days(day)
-    final_second = add_seconds(second)
+    @final_day = add_days(day)
+    @final_second = add_seconds(second)
   end
 
   def self.add_seconds(second)
@@ -29,5 +29,9 @@ class Gigasecond
 
   def self.add_days(day)
     day + 11574
+  end
+
+  def self.check_if_leap_year(year)
+    year % 4 == 0 ? true : false
   end
 end
