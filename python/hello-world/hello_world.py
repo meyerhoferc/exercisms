@@ -3,7 +3,4 @@
 #
 
 def hello(name='World'):
-    if name:
-        return "Hello, %s!" %(name)
-    else:
-        return "Hello, World!"
+    return "Hello, %s!" %(name or "World")
