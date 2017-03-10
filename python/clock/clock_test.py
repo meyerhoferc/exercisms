@@ -2,7 +2,6 @@ import unittest
 
 from clock import Clock
 
-
 class ClockTest(unittest.TestCase):
     # Test creating a new clock with an initial time.
     def test_on_the_hour(self):
